@@ -39,22 +39,23 @@ struct ShapesGridView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Clear All") {
-                        //Clear All action
                         viewModel.clearAll()
                     }
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink("Edit circle") {
-                        
+                        EditCirclesView(viewModel: viewModel)
                     }
                 }
                 
                 ToolbarItem(placement: .bottomBar) {
-                    ScrollView(.horizontal){
+                    ScrollView(.horizontal, showsIndicators: false){
+                        Spacer()
                         BottomButtonViews(buttons: viewModel.shapesButtons.buttons, action: { shape in
                             viewModel.addShape(shape)
                         })
+                        Spacer()
                     }
                 }
             }

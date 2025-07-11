@@ -39,5 +39,16 @@ class ShapesViewModel: ObservableObject {
         shapes.removeAll()
     }
     
+    func removeLastCircle() {
+        if let lastCircle = shapes.lastIndex(of: .circle) {
+            shapes.remove(at: lastCircle)
+        }
+    }
+    
+    func removeAllCircle() {
+        shapes.removeAll { shape in
+            shape == .circle
+        }
+    }
     
 }
