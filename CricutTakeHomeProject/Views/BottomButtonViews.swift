@@ -8,23 +8,19 @@
 import SwiftUI
 
 struct BottomButtonViews: View {
-    var buttons: [String]
+    var buttons: [ButtonsModel]
     
     var body: some View {
-        HStack() {
-            Button("Circle") {
-                //Circle pressed.
-            }
-            Spacer()
-            Button("Square") {
-                //Square pressed.
-            }
-            Spacer()
-            Button("Triangle") {
-                //Triangle pressed.
+        HStack {
+            ForEach(buttons, id: \.draw_path) { button in
+                Button(button.name) {
+                    //Button actions
+                }
             }
         }
         .padding()
+        
+        
     }
 }
 
@@ -44,6 +40,6 @@ struct TopButtonViews: View {
 }
 
 
-#Preview {
-    BottomButtonViews()
-}
+//#Preview {
+//    BottomButtonViews()
+//}

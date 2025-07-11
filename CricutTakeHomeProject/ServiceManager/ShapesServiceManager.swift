@@ -7,6 +7,8 @@
 
 import Foundation
 
+private let shapesURL = "https://staticcontent.cricut.com/static/test/shapes_001.json"
+
 protocol ShapesServiceProtocol {
     func getShapes() async throws -> Shapes
 }
@@ -14,8 +16,7 @@ protocol ShapesServiceProtocol {
 class ShapesServiceManager: ShapesServiceProtocol {
     
     func getShapes() async throws -> Shapes {
-        
-        guard let url = URL(string: "http://staticcontent.cricut.com/static/test/shapes_001.json") else {
+        guard let url = URL(string: shapesURL) else {
             throw URLError(.badURL)
         }
         return try await RequestManager.shared.getData(url: url)
