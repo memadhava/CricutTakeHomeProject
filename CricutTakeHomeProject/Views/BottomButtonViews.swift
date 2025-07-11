@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BottomButtonViews: View {
     var buttons: [ButtonsModel]
-    var action: (String) -> Void
+    var action: (ShapeType) -> Void
     
     
     var body: some View {
@@ -17,7 +17,7 @@ struct BottomButtonViews: View {
             ForEach(buttons, id: \.draw_path) { button in
                 Button(button.name ?? "NA") {
                     //viewmodel.addShape
-                    action(button.name ?? "NA")
+                    action(button.draw_path)
                 }
             }
         }

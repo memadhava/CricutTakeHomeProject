@@ -6,20 +6,20 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct ShapeTypes: Codable {
+struct ButtonTypes: Codable {
     let buttons: [ButtonsModel]
 }
 
 struct ButtonsModel: Codable {
     let name: String?
-    let draw_path: String?
+    let draw_path: ShapeType
 }
 
-
-struct Shapes {
-    let id = UUID()
-    let shape: String
-    let draw_path: String
+enum ShapeType: String, Codable{
+    case circle
+    case square
+    case triangle
 }
 

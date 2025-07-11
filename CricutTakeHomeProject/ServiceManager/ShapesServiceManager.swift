@@ -10,12 +10,12 @@ import Foundation
 private let shapesURL = "https://staticcontent.cricut.com/static/test/shapes_001.json"
 
 protocol ShapesServiceProtocol {
-    func getShapes() async throws -> ShapeTypes
+    func getShapes() async throws -> ButtonTypes
 }
 
 class ShapesServiceManager: ShapesServiceProtocol {
     
-    func getShapes() async throws -> ShapeTypes {
+    func getShapes() async throws -> ButtonTypes {
         guard let url = URL(string: shapesURL) else {
             throw URLError(.badURL)
         }

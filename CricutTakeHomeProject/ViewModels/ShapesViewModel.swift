@@ -9,9 +9,9 @@ import Foundation
 
 @MainActor
 class ShapesViewModel: ObservableObject {
-    @Published var shapesButtons: ShapeTypes = ShapeTypes(buttons: [])
+    @Published var shapesButtons: ButtonTypes = ButtonTypes(buttons: [])
     @Published var errorMessage: String?
-    @Published var shapes = [Shapes(shape: "Circle", draw_path: "circle")]
+    @Published var shapes: [ShapeType] = []
     
     let serviceManager: ShapesServiceProtocol
     
@@ -31,10 +31,13 @@ class ShapesViewModel: ObservableObject {
     }
     
     
-    func addShape(_ type: String) {
-        shapes.append(Shapes(shape: type, draw_path: type))
+    func addShape(_ type: ShapeType) {
+        shapes.append(type)
     }
     
+    func clearAll() {
+        shapes.removeAll()
+    }
     
     
 }
