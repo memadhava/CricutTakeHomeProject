@@ -11,25 +11,26 @@ import Foundation
 class ShapesViewModel: ObservableObject {
     @Published var shapesButtons: ButtonTypes = ButtonTypes(buttons: [])
     @Published var errorMessage: String?
+    @Published var isLoading = false
     @Published var shapes: [ShapeType] = []
     
     let serviceManager: ShapesServiceProtocol
-    
     
     init(serviceManager: ShapesServiceProtocol) {
         self.serviceManager = serviceManager
     }
     
     func getShapes() async {
+        defer {
+            isLoading = false
+        }
+        isLoading = true
         do {
             shapesButtons = try await serviceManager.getShapes()
-            print(shapesButtons)
         } catch {
             errorMessage = error.localizedDescription
         }
-        
     }
-    
     
     func addShape(_ type: ShapeType) {
         shapes.append(type)

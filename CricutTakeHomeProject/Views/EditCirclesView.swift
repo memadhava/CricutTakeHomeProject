@@ -28,21 +28,17 @@ struct EditCirclesView: View {
         }
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
-            
                 HStack {
                     Button("Delete all") {
                         viewModel.removeAllCircle()
                     }
-                    
                     Button("Add") {
                         viewModel.addShape(.circle)
                     }
-                    
                     Button("Remove") {
                         viewModel.removeLastCircle()
                     }
                 }
-                
             }
         }
         
