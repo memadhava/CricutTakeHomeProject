@@ -9,18 +9,19 @@ import SwiftUI
 
 struct BottomButtonViews: View {
     var buttons: [ButtonsModel]
+    var action: (String) -> Void
+    
     
     var body: some View {
         HStack {
             ForEach(buttons, id: \.draw_path) { button in
-                Button(button.name) {
-                    //Button actions
+                Button(button.name ?? "NA") {
+                    //viewmodel.addShape
+                    action(button.name ?? "NA")
                 }
             }
         }
         .padding()
-        
-        
     }
 }
 

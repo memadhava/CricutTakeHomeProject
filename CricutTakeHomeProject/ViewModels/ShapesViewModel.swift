@@ -9,8 +9,9 @@ import Foundation
 
 @MainActor
 class ShapesViewModel: ObservableObject {
-    @Published var shapesButtons: Shapes = Shapes(buttons: [])
+    @Published var shapesButtons: ShapeTypes = ShapeTypes(buttons: [])
     @Published var errorMessage: String?
+    @Published var shapes = [Shapes(shape: "Circle", draw_path: "circle")]
     
     let serviceManager: ShapesServiceProtocol
     
@@ -27,6 +28,11 @@ class ShapesViewModel: ObservableObject {
             errorMessage = error.localizedDescription
         }
         
+    }
+    
+    
+    func addShape(_ type: String) {
+        shapes.append(Shapes(shape: type, draw_path: type))
     }
     
     

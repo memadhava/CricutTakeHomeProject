@@ -7,11 +7,19 @@
 
 import Foundation
 
-struct Shapes: Codable {
+struct ShapeTypes: Codable {
     let buttons: [ButtonsModel]
 }
 
 struct ButtonsModel: Codable {
-    let name: String
+    let name: String?
+    let draw_path: String?
+}
+
+
+struct Shapes {
+    let id = UUID()
+    let shape: String
     let draw_path: String
 }
+
