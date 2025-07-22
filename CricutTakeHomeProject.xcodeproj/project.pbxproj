@@ -6,9 +6,40 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		995649D32E298C6E00BA9506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 995649212E20758800BA9506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 995649282E20758800BA9506;
+			remoteInfo = CricutTakeHomeProject;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		995649292E20758800BA9506 /* CricutTakeHomeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricutTakeHomeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		995649CF2E298C6E00BA9506 /* CricutTakeHomeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CricutTakeHomeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		995649DB2E298CAA00BA9506 /* Exceptions for "CricutTakeHomeProjectTests" folder in "CricutTakeHomeProjectTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ShapesViewModelTest.swift,
+			);
+			target = 995649CE2E298C6E00BA9506 /* CricutTakeHomeProjectTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		995649DC2E298CAA00BA9506 /* Exceptions for "CricutTakeHomeProjectTests" folder in "Copy Bundle Resources" phase from "CricutTakeHomeProjectTests" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 995649CD2E298C6E00BA9506 /* Resources */;
+			membershipExceptions = (
+				ShapesViewModelTest.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9956492B2E20758800BA9506 /* CricutTakeHomeProject */ = {
@@ -16,10 +47,26 @@
 			path = CricutTakeHomeProject;
 			sourceTree = "<group>";
 		};
+		995649D02E298C6E00BA9506 /* CricutTakeHomeProjectTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				995649DB2E298CAA00BA9506 /* Exceptions for "CricutTakeHomeProjectTests" folder in "CricutTakeHomeProjectTests" target */,
+				995649DC2E298CAA00BA9506 /* Exceptions for "CricutTakeHomeProjectTests" folder in "Copy Bundle Resources" phase from "CricutTakeHomeProjectTests" target */,
+			);
+			path = CricutTakeHomeProjectTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		995649262E20758800BA9506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		995649CC2E298C6E00BA9506 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				9956492B2E20758800BA9506 /* CricutTakeHomeProject */,
+				995649D02E298C6E00BA9506 /* CricutTakeHomeProjectTests */,
 				9956492A2E20758800BA9506 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				995649292E20758800BA9506 /* CricutTakeHomeProject.app */,
+				995649CF2E298C6E00BA9506 /* CricutTakeHomeProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +119,29 @@
 			productReference = 995649292E20758800BA9506 /* CricutTakeHomeProject.app */;
 			productType = "com.apple.product-type.application";
 		};
+		995649CE2E298C6E00BA9506 /* CricutTakeHomeProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 995649D72E298C6E00BA9506 /* Build configuration list for PBXNativeTarget "CricutTakeHomeProjectTests" */;
+			buildPhases = (
+				995649CB2E298C6E00BA9506 /* Sources */,
+				995649CC2E298C6E00BA9506 /* Frameworks */,
+				995649CD2E298C6E00BA9506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				995649D42E298C6E00BA9506 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				995649D02E298C6E00BA9506 /* CricutTakeHomeProjectTests */,
+			);
+			name = CricutTakeHomeProjectTests;
+			packageProductDependencies = (
+			);
+			productName = CricutTakeHomeProjectTests;
+			productReference = 995649CF2E298C6E00BA9506 /* CricutTakeHomeProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +154,10 @@
 				TargetAttributes = {
 					995649282E20758800BA9506 = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					995649CE2E298C6E00BA9506 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 995649282E20758800BA9506;
 					};
 				};
 			};
@@ -100,12 +176,20 @@
 			projectRoot = "";
 			targets = (
 				995649282E20758800BA9506 /* CricutTakeHomeProject */,
+				995649CE2E298C6E00BA9506 /* CricutTakeHomeProjectTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		995649272E20758800BA9506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		995649CD2E298C6E00BA9506 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +206,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		995649CB2E298C6E00BA9506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		995649D42E298C6E00BA9506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 995649282E20758800BA9506 /* CricutTakeHomeProject */;
+			targetProxy = 995649D32E298C6E00BA9506 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		995649322E20758900BA9506 /* Debug */ = {
@@ -298,6 +397,40 @@
 			};
 			name = Release;
 		};
+		995649D52E298C6E00BA9506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.madhav.CricutTakeHomeProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CricutTakeHomeProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CricutTakeHomeProject";
+			};
+			name = Debug;
+		};
+		995649D62E298C6E00BA9506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.madhav.CricutTakeHomeProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CricutTakeHomeProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CricutTakeHomeProject";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -315,6 +448,15 @@
 			buildConfigurations = (
 				995649352E20758900BA9506 /* Debug */,
 				995649362E20758900BA9506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		995649D72E298C6E00BA9506 /* Build configuration list for PBXNativeTarget "CricutTakeHomeProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995649D52E298C6E00BA9506 /* Debug */,
+				995649D62E298C6E00BA9506 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

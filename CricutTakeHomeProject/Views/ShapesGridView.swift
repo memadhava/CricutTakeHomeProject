@@ -56,8 +56,8 @@ struct ShapesGridView: View {
     }
     
     //To avoid setting frame and color multiple times, created this method to reduce duplicate code
-    func updateShape(_ shape: ShapeType) -> some View{
-        switch shape {
+    func updateShape(_ item: DrawPath) -> some View{
+        switch item.shape {
         case .circle:
             return AnyView(Circle())
         case .square:

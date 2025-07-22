@@ -12,7 +12,7 @@ class ShapesViewModel: ObservableObject {
     @Published var shapesButtons: ButtonTypes = ButtonTypes(buttons: [])
     @Published var errorMessage: String?
     @Published var isLoading = false
-    @Published var shapes: [ShapeType] = []
+    @Published var shapes: [DrawPath] = []
     
     let serviceManager: ShapesServiceProtocol
     
@@ -32,7 +32,7 @@ class ShapesViewModel: ObservableObject {
         }
     }
     
-    func addShape(_ type: ShapeType) {
+    func addShape(_ type: DrawPath) {
         shapes.append(type)
     }
     
@@ -41,15 +41,13 @@ class ShapesViewModel: ObservableObject {
     }
     
     func removeLastCircle() {
-        if let lastCircle = shapes.lastIndex(of: .circle) {
+        if let lastCircle = shapes.lastIndex(where:  { $0.shape == .circle }) {
             shapes.remove(at: lastCircle)
         }
     }
     
     func removeAllCircle() {
-        shapes.removeAll { shape in
-            shape == .circle
-        }
+        shapes.removeAll(where: { $0.shape == .circle })
     }
     
 }

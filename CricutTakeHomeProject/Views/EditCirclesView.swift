@@ -16,7 +16,8 @@ struct EditCirclesView: View {
     let columns: [GridItem] = Array(repeating: GridItem(.flexible()), count: 3)
     var body: some View {
         
-        let circles = viewModel.shapes.filter { $0 == .circle }
+        let circles = viewModel.shapes.filter { $0.shape == .circle }
+        
         ScrollView(.vertical) {
             LazyVGrid(columns: columns) {
                 ForEach(circles.indices, id: \.self) { index in
@@ -33,7 +34,7 @@ struct EditCirclesView: View {
                         viewModel.removeAllCircle()
                     }
                     Button("Add") {
-                        viewModel.addShape(.circle)
+                        viewModel.addShape(DrawPath(shape: .circle, style: .filled))
                     }
                     Button("Remove") {
                         viewModel.removeLastCircle()

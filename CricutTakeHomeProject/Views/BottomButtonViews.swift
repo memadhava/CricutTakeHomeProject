@@ -9,12 +9,12 @@ import SwiftUI
 
 struct BottomButtonViews: View {
     var buttons: [ButtonsModel]
-    var action: (ShapeType) -> Void
+    var action: (DrawPath) -> Void
     
     var body: some View {
-        ScrollView {
+        ScrollView(.horizontal) {
             HStack {
-                ForEach(buttons, id: \.draw_path) { button in
+                ForEach(buttons, id: \.name) { button in
                     Button(button.name ?? "NA") {
                         action(button.draw_path)
                     }

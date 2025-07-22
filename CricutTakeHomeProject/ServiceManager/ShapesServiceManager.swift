@@ -7,7 +7,9 @@
 
 import Foundation
 
-private let shapesURL = "https://staticcontent.cricut.com/static/test/shapes_001.json"
+//private let shapesURL = "https://staticcontent.cricut.com/static/test/shapes_001.json"
+private let shapesURL = "https://staticcontent.cricut.com/static/test/styled_shapes_001.json"
+
 
 protocol ShapesServiceProtocol {
     func getShapes() async throws -> ButtonTypes
@@ -23,3 +25,5 @@ class ShapesServiceManager: ShapesServiceProtocol {
     }
     
 }
+
+
